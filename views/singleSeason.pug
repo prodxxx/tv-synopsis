@@ -1,0 +1,22 @@
+html
+  head
+  link(rel="stylesheet" href="/css/styles.css")
+  include partials/head
+  body  
+      h1
+        h2.center= `Seasons ${season.number}`
+        div
+          table
+            tr  
+              th.number No.
+              th Title
+              th Director
+            each episode in season.episodes
+              tr
+                td.center= episode.number
+                td= episode.title
+                td= episode.director
+              tr
+                td(colspan=3)= episode.synopsis
+
+

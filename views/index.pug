@@ -1,0 +1,28 @@
+html
+  head
+  link(rel="stylesheet" href="/css/styles.css")
+  include partials/head
+  body  
+      h1
+      
+      div
+      h2 Developed By
+      p
+        ul
+          for developer in showData.developedBy
+            li= developer
+      
+      h2 Starring
+      p
+        ul
+          for star in showData.starring
+            li= star
+      
+      h2 Seasons
+      p
+        ul
+          for season in showData.seasons
+            li 
+              a(href= `singleSeason/${season.number}`)= `Season ${season.number}`
+
+
